@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>alert plugin</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/script/main.js"></script>
+    <style>
+         body {  
+           min-width: 300px;  
+           overflow-x: hidden;  
+        }  
+
+        .onCursor{
+            cursor:pointer;
+         }
+
+        .onCursor:hover{
+           background:lightgrey;
+           color:blue;
+        }
+    </style>
+</head>
+<body>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            弹出事件
+        </h3>
+    </div>
+    <div class="panel-body">
+         <ul class="list-group">
+            <li class="list-group-item onCursor" id="goal">弹出alert</li>
+            <li class="list-group-item onCursor" id="money"">弹出桌面通知</li>
+            <li class="list-group-item onCursor" id="meal">要吃的饭</li>
+        </ul>
+    </div>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">控件</h3>
+    </div>
+    <div class="panel-body">
+        <input type="text" id="input1" placeholder="输入值"/>
+	<div style="margin:10px"/>
+        <input type="button" class="btn btn-w-m btn-default" id="button1" value="点击">
+        <input type="button" class="btn btn-w-m btn-info" id="button2" value="撤销">
+    </div>
+</div>
+
+
+</body>
+</html>
