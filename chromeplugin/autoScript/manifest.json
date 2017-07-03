@@ -1,0 +1,33 @@
+{
+  "name": "AutoScript",
+  "version": "0.0.1",
+  "manifest_version": 2,
+
+  "description": "该插件用以执行自定义的JS脚本",
+  "icons": {
+    "16": "image/gear_16.png",
+	"32": "image/gear_32.png",
+    "48": "image/gear_48.png"
+  },
+
+  "browser_action": {
+    "default_title": "脚本自动化",
+    "default_icon": "image/gear_16.png",
+    "default_popup": "html/popup.html"
+  },
+  "background": {
+    "scripts": ["script/jquery-2.0.3.min.js","script/background.js"]
+  },
+  "content_scripts": [
+    {
+      "js": ["script/jquery-2.0.3.min.js","script/contentscript.js"],
+      "matches": [
+        "*://fic-oprii-admin-stg1.paic.com.cn/*"
+      ]
+    }
+  ],
+    "permissions": [
+		"http://*/*",
+		"https://*/*"
+	]
+}
